@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: var(--tg-viewport-height);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
