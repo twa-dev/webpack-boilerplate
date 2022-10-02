@@ -43,6 +43,7 @@ const config = {
               esModule: true,
               modules: {
                 namedExport: true,
+                localIdentName: "[hash:base64:4]",
               },
             },
           },
