@@ -1,11 +1,11 @@
 # TWA boilerplate
 
-If you want to start a new project and have full control under your infrastructure, you can use this boilerplate.
+If you want to start a new project and fully control your infrastructure, you can use our Boilerplate.
 
 ## Quick start
 
 ```bash
-- git clone git@github.com:twa-dev/boilerplate.git {projectName}
+- git clone git@github.com:twa-dev/Boilerplate.git {projectName}
 - cd {projectName}
 - yarn install
 - yarn start
@@ -13,7 +13,7 @@ If you want to start a new project and have full control under your infrastructu
 
 ## Documentation
 
-This project solves all popular problems you gonna face if you develop TWA.
+This project solves all the famous problems you gonna face if you develop TWA.
 
 ### Development
 
@@ -22,7 +22,7 @@ to the internet. It can be useful if you want to see how your application works 
 
 ### Build
 
-`yarn build` creates optimized production-ready bundle inside `dist` directory.
+`yarn build` creates an optimized production-ready bundle inside `dist` directory.
 
 ### Bundle analyze
 
@@ -32,13 +32,13 @@ to the internet. It can be useful if you want to see how your application works 
 
 `yarn test:static` runs linters and type check.
 
-If you work in a team it's important to keep consistent code style. Include this command in your CI process to prevent code base incosistency.
+If you work in a team it's important to keep a consistent code style. Include this command in your CI process to prevent code base inconsistency.
 
 ## Technologies
 
 Boilerplate uses Webpack, CSS Modules, TypeScript, React, @twa-dev/sdk, @twa-dev/mark42, eslint, stylelint, prettier and ngrok.
 
-All these tools helps you to deliver your value fast and confidently.
+All these tools help you to deliver your features fast and confidently.
 
 ### SVG
 
@@ -55,15 +55,15 @@ import Diamond from "./diamond.component.svg";
 
 ### CSS Modules
 
-All `*.module.css` files are treated as isolated modules. It means that you don't have to worry about class names collisions.
-Moreover, css is typed, so it's impossible to use unexisting class names in `.tsx`.
-
-We use named exports for CSS to improve TS checks.
+All `*.module.css` files are treated as isolated [CSS Modules](https://github.com/css-modules/css-modules). It means that you don't have to worry about class name collisions.
+Moreover, this CSS is typed, so it's impossible to use unexisting class names in `.tsx`. Boilerplate uses named exports for CSS to improve TS checks.
 
 ### Ngrok
 
 [Ngrok](https://ngrok.com/) is a powerful tool for creating tunnel between your computer and the internet. It's
-already built in `yarn start` command. To enable ngrok you have to create `ngrok.json` in the root of your project.
+already built in `yarn start` command. To enable Ngrok you need to create `ngrok.json` in the root of your project.
+
+**Important:** you have to buy Ngrok subscription if you want to register fixed subdomain names.
 
 Example of `ngrok.json`:
 
@@ -75,8 +75,4 @@ Example of `ngrok.json`:
 }
 ```
 
-**Important:** you have to buy Ngrok subscription if you want to register fixed subdomain names.
-
-Your local website will be available on _https://{subdomain}.{region}.ngrok.io/_.
-
-That's it. All you need to do is to [set](https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button) this URL as Menu Button URL.
+Now if you run `yarn start`, your local version of TWA will be available on _https://{subdomain}.{region}.ngrok.io/_. That's it. All you need to do is to [set](https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button) this URL as Menu Button URL.
