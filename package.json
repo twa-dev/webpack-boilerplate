@@ -43,12 +43,13 @@
     "@twa-dev/mark42": "^0.0.30",
     "@twa-dev/sdk": "^0.0.11",
     "autoprefixer": "^10.4.12",
+    "cross-env": "^7.0.3",
     "open": "^8.4.0",
     "postcss": "^8.4.17",
     "postcss-loader": "^7.0.1"
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack serve",
+    "start": "cross-env NODE_ENV=development webpack serve",
     "build": "webpack",
     "analyze": "webpack --analyze",
     "test:eslint": "eslint --ext .ts,.tsx,.js \"./\"",
