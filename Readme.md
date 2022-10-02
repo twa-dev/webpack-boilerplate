@@ -36,7 +36,7 @@ If you work in a team it's important to keep a consistent code style. Include th
 
 ## Technologies
 
-Boilerplate uses Webpack, CSS Modules, TypeScript, React, @twa-dev/sdk, @twa-dev/mark42, eslint, stylelint, prettier and ngrok.
+Boilerplate uses Webpack, CSS Modules, TypeScript, React, [@twa-dev/sdk](https://github.com/twa-dev/sdk), [@twa-dev/mark42](https://github.com/twa-dev/Mark42), eslint, stylelint, prettier and ngrok.
 
 All these tools help you to deliver your features fast and confidently.
 
