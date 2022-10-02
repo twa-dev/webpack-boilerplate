@@ -5,11 +5,10 @@ If you want to start a new project and have full control under your infrastructu
 ## Quick start
 
 ```bash
-mdkir {projectName}
-git clone git@github.com:twa-dev/boilerplate.git {projectName}
-cd {projectName}
-yarn install
-yarn start
+- git clone git@github.com:twa-dev/boilerplate.git {projectName}
+- cd {projectName}
+- yarn install
+- yarn start
 ```
 
 ## Documentation
@@ -76,6 +75,8 @@ Example of `ngrok.json`:
 }
 ```
 
-Your local website will be available on "https://{subdomain}.{region}.ngrok.io/".
+**Important:** you have to buy Ngrok subscription if you want to register fixed subdomain names.
+
+Your local website will be available on _https://{subdomain}.{region}.ngrok.io/_.
 
 That's it. All you need to do is to [set](https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button) this URL as Menu Button URL.
