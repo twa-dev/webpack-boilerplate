@@ -1,3 +1,6 @@
 {
-  "extends": ["stylelint-config-recommended", "stylelint-config-prettier"]
+  "extends": ["stylelint-config-recommended", "stylelint-config-prettier"],
+  "rules": {
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$"
+  }
 }

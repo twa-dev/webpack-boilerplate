@@ -8,11 +8,12 @@
     "moduleResolution": "Node",
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "noEmit": true,
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",
         "options": {
-          "customMatcher": "\\.css$"
+          "customTemplate": "./utils/customTemplate/index.js"
         }
       }
     ]

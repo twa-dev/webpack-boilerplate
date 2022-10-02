@@ -2,8 +2,6 @@
   "name": "@twa-dev/boilerplate",
   "type": "module",
   "version": "1.0.0",
-  "main": "src/index.tsx",
-  "license": "MIT",
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -42,11 +40,20 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
-    "@twa-dev/mark42": "latest"
+    "@twa-dev/mark42": "^0.0.30",
+    "@twa-dev/sdk": "^0.0.11",
+    "autoprefixer": "^10.4.12",
+    "open": "^8.4.0",
+    "postcss": "^8.4.17",
+    "postcss-loader": "^7.0.1"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack serve",
     "build": "webpack",
-    "analyze": "webpack --analyze"
+    "analyze": "webpack --analyze",
+    "test:eslint": "eslint --ext .ts,.tsx,.js \"./\"",
+    "test:stylelint": "stylelint \"src/**/*.css\"",
+    "test:tsc": "tsc",
+    "test:prettier": "prettier --check"
   }
 }

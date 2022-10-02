@@ -2,11 +2,16 @@ import HTMLWebpackPlugin from "html-webpack-plugin";
 import StylelintWebpackPlugin from "stylelint-webpack-plugin";
 import EslintWebpackPlugin from "eslint-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import HtmlInlineScriptPlugin from "html-inline-script-webpack-plugin";
 import path from "path";
 import ngrok from "ngrok";
-import ngrokConfig from "./ngrok.js";
 import { fileURLToPath } from "url";
+import { createRequire } from "module";
+import { readFile } from "fs/promises";
+import open from "open";
 
+const require = createRequire(import.meta.url);
+const { name } = require("./package.json");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const isDev = process.env.NODE_ENV === "development";
@@ -22,6 +27,7 @@ const config = {
     clean: true,
   },
   module: {
+    strictExportPresence: true,
     rules: [
       {
         test: /\.(ts|tsx)$/,
@@ -29,26 +35,38 @@ const config = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
+        test: /\.module.css$/,
         use: [isDev ? "style-loader" : MiniCssExtractPlugin.loader].concat([
           {
             loader: "css-loader",
             options: {
+              esModule: true,
               modules: {
-                auto: (resourcePath) => {
-                  return !resourcePath.includes("node_modules");
-                },
+                namedExport: true,
               },
             },
           },
+          "postcss-loader",
         ]),
       },
       {
-        test: /\.svg$/,
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [isDev ? "style-loader" : MiniCssExtractPlugin.loader].concat([
+          "css-loader",
+        ]),
+      },
+      {
+        test: /\.component.svg$/,
         use: ["svg-react-loader"].concat(isDev ? [] : ["svgo-loader"]),
       },
       {
         test: /\.(png|jpg|gif|woff|woff2|ttf)$/i,
+        type: "asset",
+      },
+      {
+        test: /\.svg$/i,
+        use: isDev ? [] : ["svgo-loader"],
         type: "asset",
       },
     ],
@@ -71,13 +89,16 @@ const config = {
     }),
     new HTMLWebpackPlugin({
       template: "./src/index.html",
+      title: name,
+    }),
+    new HtmlInlineScriptPlugin({
+      scriptMatchPattern: [/telegram-web-apps/],
     }),
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
   },
   devServer: {
-    open: true,
     port: 9000,
     client: {
       overlay: {
@@ -86,15 +107,20 @@ const config = {
       },
     },
     onListening: async function (devServer) {
-      if (ngrokConfig.authToken) {
-        const port = devServer.server.address().port;
-        await ngrok.connect({
+      const port = devServer.server.address().port;
+      try {
+        const ngrokConfig = JSON.parse(
+          await readFile(new URL("./ngrok.json", import.meta.url))
+        );
+        const url = await ngrok.connect({
+          host_header: "rewrite",
           proto: "http",
           addr: port,
-          host_header: "rewrite",
-          authtoken: ngrokConfig.authToken,
-          subdomain: ngrokConfig.subdomain,
+          ...ngrokConfig,
         });
+        await open(url);
+      } catch (e) {
+        await open(`http://localhost:${port}`);
       }
     },
   },
