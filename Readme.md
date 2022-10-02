@@ -30,9 +30,11 @@ to the internet. It can be useful if you want to see how your application works 
 
 ### Static analyze
 
-`yarn test:static` runs linters and type check.
+- `yarn test:eslint` and `yarn test:stylelint` runs linters;
+- `yarn tsc` runs type check;
+- `yarn prettier` runs prettier (it will check your formatting but won't change anything)
 
-If you work in a team it's important to keep a consistent code style. Include this command in your CI process to prevent code base inconsistency.
+If you work in a team it's important to keep a consistent code style. Include these commands in your CI process to prevent code base inconsistency.
 
 ## Technologies
 
