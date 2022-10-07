@@ -38,6 +38,8 @@ declare module "*.json" {
   export default value;
 }
 
+declare module "*.module.css";
+
 declare module "*.component.svg" {
   import { FC, SVGProps } from "react";
   const ReactComponent: FC<SVGProps<SVGSVGElement>>;
