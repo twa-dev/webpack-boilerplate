@@ -51,7 +51,7 @@ you have to add "component." before an extension. Example:
 import diamond from "./diamond.svg";
 import Diamond from "./diamond.component.svg";
 
-<img src="diamond" />
+<img src={diamond} />
 <Diamond />
 ```
 
