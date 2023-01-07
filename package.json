@@ -3,7 +3,14 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
+    "@twa-dev/mark42": "^0.0.30",
+    "@twa-dev/sdk": "^0.0.11-rc.0",
+    "autoprefixer": "^10.4.12",
+    "cross-env": "^7.0.3",
+    "open": "^8.4.0",
+    "postcss": "^8.4.17",
+    "postcss-loader": "^7.0.1",
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
@@ -38,15 +45,6 @@
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.0"
-  },
-  "dependencies": {
-    "@twa-dev/mark42": "^0.0.30",
-    "@twa-dev/sdk": "^0.0.11",
-    "autoprefixer": "^10.4.12",
-    "cross-env": "^7.0.3",
-    "open": "^8.4.0",
-    "postcss": "^8.4.17",
-    "postcss-loader": "^7.0.1"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
