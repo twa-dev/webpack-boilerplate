@@ -36,6 +36,7 @@ const config = {
       },
       {
         test: /\.module.css$/,
+        include: /src/,
         use: [isDev ? "style-loader" : MiniCssExtractPlugin.loader].concat([
           {
             loader: "css-loader",
@@ -52,7 +53,7 @@ const config = {
       },
       {
         test: /\.css$/,
-        include: /node_modules/,
+        exclude: /src/,
         use: [isDev ? "style-loader" : MiniCssExtractPlugin.loader].concat([
           "css-loader",
         ]),
@@ -98,6 +99,10 @@ const config = {
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
+    alias: {
+      react: path.resolve(__dirname, "./node_modules/react"),
+      "react-dom": path.resolve(__dirname, "./node_modules/react-dom"),
+    },
   },
   devServer: {
     port: 9000,
