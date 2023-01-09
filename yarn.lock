@@ -1119,21 +1119,14 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
-"@twa-dev/mark42@^0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@twa-dev/mark42/-/mark42-0.0.30.tgz#7d22b4ddc88e8e4519405464e7cc9acf21943425"
-  integrity sha512-g+hY5f0Q5566fGz7llmzsGPOb45m4ldfrc56HJI16TjrDUmevTY0CMltPXs7AmZ4OtghQJe3qsyTSrhR0tTRNw==
+"@twa-dev/mark42@^0.0.36":
+  version "0.0.36"
+  resolved "https://registry.yarnpkg.com/@twa-dev/mark42/-/mark42-0.0.36.tgz#1d32106c8cce4359937130e976681e1b9bd482b9"
+  integrity sha512-Ke4i4D/plPGoDSMGnbWwThNtBeC+b9I1HkF3tInwQFU2Myb2A9HPP/vI2b78EFmjSTGZn/FQ6bOAS5Xqr/GWzg==
   dependencies:
     "@babel/runtime" "^7.18.9"
-    "@twa-dev/sdk" "^0.0.11"
+    "@twa-dev/sdk" "^0.0.14"
     classnames "^2.3.1"
-
-"@twa-dev/sdk@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@twa-dev/sdk/-/sdk-0.0.11.tgz#df65c0ecb493eb247783d72881e9a36ac1b30fb1"
-  integrity sha512-omwR0cV7qqX8YB+sfZcJYIDBSo1/L5bOkptPiwmG8a1V7IQNOhL6gN0i5gD3ykxY9k5pbe5/8qKjr3fBm2L0AQ==
-  dependencies:
-    "@twa-dev/types" "^6.2.4"
 
 "@twa-dev/sdk@^0.0.14":
   version "0.0.14"
@@ -1142,15 +1135,17 @@
   dependencies:
     "@twa-dev/types" "^6.4.0"
 
-"@twa-dev/types@^6.2.4":
-  version "6.2.4"
-  resolved "https://registry.yarnpkg.com/@twa-dev/types/-/types-6.2.4.tgz#860b2e297c1df75e857a5f6a23d98a3850c3d4c6"
-  integrity sha512-CEO+xdrMm6PkkGkthTWaVqmjtFafDBkCTIjsS/1YrEiKn90Hh6KoWKeDK3gikYANTrCrrGaJh5uaKVWR5yjPHQ==
+"@twa-dev/sdk@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@twa-dev/sdk/-/sdk-6.4.2.tgz#86644ceecb5339f65d38de12bd6177117548ced1"
+  integrity sha512-f/lA6gu1HenBIZWXVlvmeBvZ7KnEMR4MOzSiTRJz/YvxQsGUG1a5CpZ4Hyr/8qA920bOlhZdvXxCihlw0fsTWQ==
+  dependencies:
+    "@twa-dev/types" "^6.4.2"
 
-"@twa-dev/types@^6.4.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@twa-dev/types/-/types-6.4.0.tgz#71503d1d9ea375d18fcfe388b3915a9e122b8805"
-  integrity sha512-zYLvE9mfS5jBZrz76UQiEgJMrrBB6PvTdBkP4bqP/Pm/SScpKt+XKTj3GJHU3oqXlEF/4gVsreIqfl821KG+ow==
+"@twa-dev/types@^6.4.0", "@twa-dev/types@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@twa-dev/types/-/types-6.4.2.tgz#4626906391bb1dcb6d16eb16fba30ff3e8333da4"
+  integrity sha512-LwPdC5+CyYVqowiw3oxuHvL3F/oid72nFMqB+N+GyjwMhxKmwKtlMSBVKG5G1S3CNSwRUDZBFXOnukBvcC84/Q==
 
 "@types/body-parser@*":
   version "1.19.2"
