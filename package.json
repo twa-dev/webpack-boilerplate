@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@twa-dev/mark42": "^0.0.36",
+    "@twa-dev/mark42": "^0.0.37",
     "@twa-dev/sdk": "^6.4.2",
     "autoprefixer": "^10.4.12",
     "cross-env": "^7.0.3",

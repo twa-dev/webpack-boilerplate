@@ -1119,21 +1119,14 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
-"@twa-dev/mark42@^0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@twa-dev/mark42/-/mark42-0.0.36.tgz#1d32106c8cce4359937130e976681e1b9bd482b9"
-  integrity sha512-Ke4i4D/plPGoDSMGnbWwThNtBeC+b9I1HkF3tInwQFU2Myb2A9HPP/vI2b78EFmjSTGZn/FQ6bOAS5Xqr/GWzg==
+"@twa-dev/mark42@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@twa-dev/mark42/-/mark42-0.0.37.tgz#aaaf699d5450483eae22deb2920ee332d69e3c8f"
+  integrity sha512-mlCl5wNCS594nVOCPmqZrX6zeD7RvqO9svL/oFqHrY89CUR7Ux4bZ1snd/ZTmYGHky1MV8824TxxY3izkjlERQ==
   dependencies:
     "@babel/runtime" "^7.18.9"
-    "@twa-dev/sdk" "^0.0.14"
+    "@twa-dev/sdk" "^6.4.2"
     classnames "^2.3.1"
-
-"@twa-dev/sdk@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@twa-dev/sdk/-/sdk-0.0.14.tgz#6b7b5c7b09b6b06b6a51fe2e9a887b283cf2815a"
-  integrity sha512-Wo3KoKRkgC2zcUo05iqP+3ohlXEK+gSr9GDc1amyFiESLnD8u6PxvULisI49RCuEDkr9I9nBVknbNvsX4rJnkg==
-  dependencies:
-    "@twa-dev/types" "^6.4.0"
 
 "@twa-dev/sdk@^6.4.2":
   version "6.4.2"
@@ -1142,7 +1135,7 @@
   dependencies:
     "@twa-dev/types" "^6.4.2"
 
-"@twa-dev/types@^6.4.0", "@twa-dev/types@^6.4.2":
+"@twa-dev/types@^6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@twa-dev/types/-/types-6.4.2.tgz#4626906391bb1dcb6d16eb16fba30ff3e8333da4"
   integrity sha512-LwPdC5+CyYVqowiw3oxuHvL3F/oid72nFMqB+N+GyjwMhxKmwKtlMSBVKG5G1S3CNSwRUDZBFXOnukBvcC84/Q==
