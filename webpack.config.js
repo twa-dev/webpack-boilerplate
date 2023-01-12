@@ -30,6 +30,12 @@ const config = {
     strictExportPresence: true,
     rules: [
       {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
+      {
         test: /\.(ts|tsx)$/,
         use: "babel-loader",
         exclude: /node_modules/,
