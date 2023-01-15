@@ -111,6 +111,7 @@ const config = {
     },
   },
   devServer: {
+    allowedHosts: "all",
     port: 9000,
     client: {
       overlay: {
